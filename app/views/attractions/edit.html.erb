@@ -1,0 +1,7 @@
+<h1>Edit Attraction</h1>
+
+<%# <%= render 'form' %>
+<%= render partial: 'form', locals: {attraction: @attraction} %>
+
+<%= link_to 'Show', @attraction %> |
+<%= link_to 'Back', attractions_path %>
