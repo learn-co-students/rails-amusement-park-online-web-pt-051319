@@ -2,8 +2,8 @@ class RidesController < ApplicationController
 
     def create
         ride = Ride.create(rides_params)
-        ride.take_ride
-        redirect_to attraction_path(ride.attraction)
+        flash[:notice] = ride.take_ride
+        redirect_to user_path(ride.user)
     end
 
     private

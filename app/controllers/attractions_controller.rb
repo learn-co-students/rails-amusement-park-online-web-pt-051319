@@ -11,6 +11,7 @@ class AttractionsController < ApplicationController
 
     def create
         @attraction = Attraction.create(attraction_params)
+        redirect_to attraction_path(@attraction)
     end
 
     def show
@@ -20,9 +21,12 @@ class AttractionsController < ApplicationController
     end
 
     def update
+      @attraction.update(attraction_params)
+      redirect_to attraction_path(@attraction)
     end
 
     def destroy
+      @attraction.delete
     end
 
     private
