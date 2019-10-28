@@ -1,0 +1,13 @@
+<%= form_tag signin_path, :method => :post do %>
+    <div>
+        <%= label_tag :user_name %>
+        <%= collection_select :user, :name, User.all, :name, :name %>
+    </div>
+    <div>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+    </div>
+    <div>
+        <%= submit_tag "Sign In" %>
+    </div>
+<% end %>
