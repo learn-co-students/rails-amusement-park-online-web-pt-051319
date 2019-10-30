@@ -1,0 +1,8 @@
+<p><strong>Name:</strong> <%= @attraction.name %></p>
+<p><strong>Total Number of Users:</strong> <%= @attraction.rides.all.count %></p>
+<p><strong>Ticket Requirements:</strong> <%= @attraction.tickets %></p>
+<p><strong>Height Requirements:</strong> <%= @attraction.min_height %></p>
+<p><strong>Nausea Rating:</strong> <%= @attraction.nausea_rating %></p>
+<p><strong>Happiness Rating:</strong> <%= @attraction.happiness_rating %></p>
+
+<%= attraction_action_link(@attraction) %> 

@@ -1,0 +1,14 @@
+<div>
+
+<%if current_user.admin == true %>
+  <strong>ADMIN</strong>
+<% end %>
+
+<p><strong>Name:</strong><%= @user.name %></p>
+<p><strong>Tickets:</strong><%= @user.tickets %></p>
+<p><strong>Mood:</strong><%= @user.mood %></p>
+<strong>Height:</strong><%= @user.height %> inches</p>
+
+<%= link_to "See attractions", attractions_path %>
+
+</div>
